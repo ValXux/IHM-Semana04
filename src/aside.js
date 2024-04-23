@@ -1,5 +1,5 @@
 const Aside = () =>{
-    return <aside className="col-md-4">
+    return <aside className="col-4">
         <h1 className="d-flex justify-content-center">CONTACTAR</h1>
         <form>
             <div className="form-group row">
