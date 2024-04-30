@@ -1,34 +1,38 @@
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
+import Productos from './data/productos.json'
+import { useNavigate } from 'react-router-dom';
+
 
 const Main = () => {
+    const navigate = useNavigate();
+
+    const handleClick = (slug) => {
+        navigate("/detalle/" + slug);
+    }
+
     return (
         <Container className="col-8">
             <Row className="justify-content-center">
-                <Col >
+                <Col>
                     <h1 className="text-center">¡Descubre la revolución en limpieza con nuestra nueva publicación de productos de limpieza!</h1>
-                    <Carousel id="carouselExample">
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://unilimpio.com/static/a3929000b57b1d0cf3e20104bd5507a0/b7dec/productos-de-limpieza-para-tu-hogar.webp"
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://www.cien.adexperu.org.pe/wp-content/uploads/2023/10/productos-limpieza-basicos-1.jpg"
-                                alt="Second slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://s3.ppllstatics.com/laverdad/www/multimedia/2023/03/15/productos-limpieza-toxicos-peligrosos-ocu-ksTE-U1909178767610w-1200x840@La%20Verdad.jpg"
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
+                    
+                    <Carousel>
+                        {
+                                Productos.map(it => {
+                                return (<Carousel.Item onClick={(e) => {
+                                    e.preventDefault(); handleClick(it.slug)
+                                }}>
+                                    <img className="d-block w-100" src={it.picture}></img>
+                                    <Carousel.Caption>
+                                        <h3>{it.name}</h3>
+                                        <p>{it.description}</p>
+                                    </Carousel.Caption>
+
+                                </Carousel.Item>);
+                            })
+                        }
                     </Carousel>
+
                     <div className="py-4">
                         <p>En un mundo donde la limpieza es esencial, nosotros te ofrecemos una solución completa y eficaz para mantener tu hogar, oficina o cualquier espacio impecable y reluciente.</p>
                         <p>¿Qué te ofrecemos?</p>
