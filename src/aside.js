@@ -13,22 +13,22 @@ const Aside = () =>{
                 </div>
             </div>
             <br></br>
-            <div class="form-group">
+            <div className="form-group">
                     <label for="">Correo</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ejemplo@test.com" required></input>
+                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ejemplo@test.com" required></input>
                 </div>
                 <br></br>
-                <div class="form-group">
+                <div className="form-group">
                     <label for="">Contraseña</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña"></input>
+                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Contraseña"></input>
                 </div>
                 <br></br>
-                <div class="form-group">
+                <div className="form-group">
                     <label for="">Mensaje</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba su mensaje aqui"></textarea>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba su mensaje aqui"></textarea>
                 </div>
                 <br></br>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" className="btn btn-send">Enviar</button>
         </form>
     </aside>
 }
