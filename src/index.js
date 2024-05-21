@@ -16,9 +16,11 @@ import Aside from "./aside";
 import Single from './single';
 import Basic from "./layout/basic";
 
+import Producto from './producto';
+
 setTimeout ( () => {
     feather.replace();
-}, 1000);
+}, 10);
  
 const router = createBrowserRouter([
     {
@@ -37,7 +39,11 @@ const router = createBrowserRouter([
                 </>
             },
             {
-                path: "detalle/:slug",
+                path: "producto",
+                element: <Producto/>
+            },
+            {
+                path: "producto/:slug",
                 element: <Single/>
             },
         ],

@@ -7,7 +7,7 @@ const Main = () => {
     const navigate = useNavigate();
 
     const handleClick = (slug) => {
-        navigate("/detalle/" + slug);
+        navigate("/producto/" + slug);
     }
 
     return (
@@ -18,12 +18,12 @@ const Main = () => {
                     
                     <Carousel>
                         {
-                                Productos.map(it => {
+                            Productos.map(it => {
                                 return (<Carousel.Item onClick={(e) => {
                                     e.preventDefault(); handleClick(it.slug)
                                 }}>
                                     <img className="d-block w-100" src={it.picture}></img>
-                                    <Carousel.Caption>
+                                    <Carousel.Caption className='deco'>
                                         <h3>{it.name}</h3>
                                         <p>{it.description}</p>
                                     </Carousel.Caption>

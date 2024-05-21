@@ -1,11 +1,11 @@
 const Footer = () =>{
-    return <footer className="py-4">
+    return <footer className="py-4 bg-dark">
         <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-            <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">VALENTIN</a></li>
-            <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">FERNANDEZ</a></li>
-            <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">GUTIERREZ</a></li>
+            <li className="nav-item"><a href="#" className="nav-link px-2 text-white">VALENTIN</a></li>
+            <li className="nav-item"><a href="#" className="nav-link px-2 text-white">FERNANDEZ</a></li>
+            <li className="nav-item"><a href="#" className="nav-link px-2 text-white">GUTIERREZ</a></li>
         </ul>
-        <p className="text-center text-muted">© 2024 UPAO - INTERACCION HOMBRE MAQUINA</p>
+        <p className="text-center text-white">© 2024 UPAO - INTERACCION HOMBRE MAQUINA</p>
     </footer>
 }
 

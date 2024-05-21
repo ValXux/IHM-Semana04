@@ -1,3 +1,15 @@
 * {
     
 }
+
+.deco {
+    background: rgb(0, 0, 0, 0.3);
+    border-radius: 25px;
+    max-width: 70vh;
+    margin: 10px;
+    padding: 10px;
+}
+
+.row-main {
+    margin: 20px;
+}
